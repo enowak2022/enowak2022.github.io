@@ -172,14 +172,14 @@
     /* div na któym osadzamy tabelkę */
     .tableWrapper{
       /* dajemy padding tylko z prawej i lewej strony */
-      padding: 0 1rem;
+      padding: 5 5rem;
     }
     
     table{
       /* box shadow ze strony https://getcssscan.com/css-box-shadow-examples*/
       box-shadow: var(--default-box-shadow);
       /* max szerokość strony */
-      width:50%;
+      width:10%;
       /* usuwamy granice pomiędzy wierszami i kolumnami */
       border-collapse: collapse;
     }
@@ -201,6 +201,120 @@
     tr:nth-child( even ){
       background: var(--foreground-lighter);
     }
+
+    th{
+      /* ustawiamy kolor ze zmiennych */
+      background-color: var(--foreground-dark);
+      padding:.5rem;
+    }
+
+    td{
+      padding:.3rem;
+    }
+
+  
+form{
+display:flex;
+flex-direction: column;
+padding:1rem;
+margin:0 1rem;
+gap:5px;
+background: var(--foreground-lighter);
+box-shadow: var(--default-box-shadow);
+border-radius: .5rem;
+input, textarea{
+  padding:10px;
+}
+
+}
+
+
+
+
+
+
+.projects{
+
+.projectsWrapper{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // justify-content: space-evenly;
+
+  .project{
+    cursor: pointer;
+    position:relative;
+    aspect-ratio: 1/1;
+    width:28%;
+    max-width: 7rem;
+    border-radius:0 0 1.4rem 1.4rem;
+    margin:.25rem;
+    header{
+      background-color: rgb(255, 255, 255);
+      z-index: 1;
+      position: relative;
+      h3{
+        margin:0;
+      }
+      p{
+        opacity:0;
+        display:none;
+      }
+    }
+    img{
+      border-radius:1.2rem;
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+
+    }
+  }
+}
+
+.display{
+  background-color: #f6f5f44e;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  ul{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: space-between;
+    li{
+      list-style-type: none;
+    }
+  }
+
+  article{
+    position: relative;
+    display:inline-block;
+
+    .displayContent{
+      position:absolute;
+      width:100%;
+      height:100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: end;
+      text-align: right;
+      h3, p{
+        margin:0;
+        padding:.5rem 1.5rem;
+        background-color: rgba(240, 248, 255, 0.735);
+      }
+    }
+    img{
+      max-height:40vh;
+    }
+  }
+
+
+}
+}
     
     footer{
       /* border:2px dashed red; */
